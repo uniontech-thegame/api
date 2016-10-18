@@ -16,6 +16,8 @@
     "body-parser": "^1.15.2",
     "cors": "^2.8.1",
     "express": "^4.14.0",
-    "pg-promise": "^5.3.4"
+    "pg-promise": "^5.3.4",
+    "request": "^2.75.0",
+    "request-promise": "^4.1.1"
   }
 }
