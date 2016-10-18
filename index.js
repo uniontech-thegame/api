@@ -8,16 +8,15 @@ const routes = require('./lib/routes')
 
 const app = express()
 
+app.set('listening ip', '0.0.0.0')
 if (app.get('env') === 'development') {
   app.set('listening port', 3000)
-  app.set('listening ip', '0.0.0.0')
 } else if (app.get('env') === 'production') {
-  if (!process.env.PORT || !process.env.IP) {
-    console.error('Missing PORT or IP')
+  if (!process.env.PORT) {
+    console.error('Missing PORT')
     process.exit(1)
   }
   app.set('listening port', process.env.PORT)
-  app.set('listening ip', process.env.IP)
 } else {
   console.error('Wrong NODE_ENV')
   process.exit(1)
