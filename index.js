@@ -30,6 +30,6 @@ app.use('/', routes)
 app.listen(app.get('listening port'), app.get('listening ip'), function onListen () {
   console.log(`${pkg.name} listening on ${app.get('listening ip')}:${app.get('listening port')}`)
 }).on('error', function onError (err) {
-  console.error(err)
+  console.error('cannot listen', err)
   process.exit(1)
 })
